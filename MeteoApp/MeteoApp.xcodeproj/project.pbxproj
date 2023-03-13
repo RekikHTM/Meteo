@@ -26,6 +26,9 @@
 		3D7AD7BB29BECC0100AA2BE2 /* SearchCityVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7AD7B729BECC0100AA2BE2 /* SearchCityVM.swift */; };
 		3D7AD7BC29BECC0100AA2BE2 /* SearchCityVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D7AD7B829BECC0100AA2BE2 /* SearchCityVC.xib */; };
 		3D7AD7BD29BECC0100AA2BE2 /* SearchCityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7AD7B929BECC0100AA2BE2 /* SearchCityModel.swift */; };
+		3D9E527929BED827004A0C54 /* HomePageVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9E527829BED827004A0C54 /* HomePageVCTests.swift */; };
+		3D9E527C29BED944004A0C54 /* ModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9E527B29BED944004A0C54 /* ModelTests.swift */; };
+		3D9E527F29BED9F6004A0C54 /* ExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9E527E29BED9F6004A0C54 /* ExtensionTests.swift */; };
 		3DC3F27E29BE96C00075C257 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC3F27D29BE96C00075C257 /* AppDelegate.swift */; };
 		3DC3F28029BE96C00075C257 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC3F27F29BE96C00075C257 /* SceneDelegate.swift */; };
 		3DC3F28529BE96C00075C257 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DC3F28329BE96C00075C257 /* Main.storyboard */; };
@@ -75,6 +78,9 @@
 		3D7AD7B729BECC0100AA2BE2 /* SearchCityVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchCityVM.swift; sourceTree = "<group>"; };
 		3D7AD7B829BECC0100AA2BE2 /* SearchCityVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchCityVC.xib; sourceTree = "<group>"; };
 		3D7AD7B929BECC0100AA2BE2 /* SearchCityModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchCityModel.swift; sourceTree = "<group>"; };
+		3D9E527829BED827004A0C54 /* HomePageVCTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePageVCTests.swift; sourceTree = "<group>"; };
+		3D9E527B29BED944004A0C54 /* ModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelTests.swift; sourceTree = "<group>"; };
+		3D9E527E29BED9F6004A0C54 /* ExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionTests.swift; sourceTree = "<group>"; };
 		3DC3F27A29BE96C00075C257 /* MeteoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeteoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DC3F27D29BE96C00075C257 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3DC3F27F29BE96C00075C257 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -230,6 +236,30 @@
 			path = searchCity;
 			sourceTree = "<group>";
 		};
+		3D9E527729BED80B004A0C54 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				3D9E527829BED827004A0C54 /* HomePageVCTests.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		3D9E527A29BED933004A0C54 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				3D9E527B29BED944004A0C54 /* ModelTests.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		3D9E527D29BED9D6004A0C54 /* extension */ = {
+			isa = PBXGroup;
+			children = (
+				3D9E527E29BED9F6004A0C54 /* ExtensionTests.swift */,
+			);
+			path = extension;
+			sourceTree = "<group>";
+		};
 		3DC3F27129BE96C00075C257 = {
 			isa = PBXGroup;
 			children = (
@@ -273,6 +303,9 @@
 		3DC3F29629BE96C10075C257 /* MeteoAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				3D9E527D29BED9D6004A0C54 /* extension */,
+				3D9E527A29BED933004A0C54 /* model */,
+				3D9E527729BED80B004A0C54 /* ViewControllers */,
 				3DC3F29729BE96C10075C257 /* MeteoAppTests.swift */,
 			);
 			path = MeteoAppTests;
@@ -508,7 +541,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D9E527C29BED944004A0C54 /* ModelTests.swift in Sources */,
+				3D9E527929BED827004A0C54 /* HomePageVCTests.swift in Sources */,
 				3DC3F29829BE96C10075C257 /* MeteoAppTests.swift in Sources */,
+				3D9E527F29BED9F6004A0C54 /* ExtensionTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
