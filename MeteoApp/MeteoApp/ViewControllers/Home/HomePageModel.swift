@@ -10,4 +10,6 @@ import Foundation
 struct HomePageModel {
     var fullListForcast: [WeatherResponse] = []
     var  filtredList: [WeatherResponse] = []
+    var selectedCities: [CityModel] = []
+
 }

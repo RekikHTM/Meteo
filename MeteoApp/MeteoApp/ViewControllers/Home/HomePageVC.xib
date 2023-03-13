@@ -10,6 +10,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomePageVC" customModule="MeteoApp" customModuleProvider="target">
             <connections>
+                <outlet property="mAddView" destination="emD-KJ-xKk" id="G2m-p7-EPF"/>
+                <outlet property="mTableView" destination="8Dr-y7-cLo" id="wET-vY-spu"/>
+                <outlet property="mTextFieldSearch" destination="d1R-vQ-1Qf" id="1AL-Qm-REX"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -17,14 +20,68 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="City name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d1R-vQ-1Qf">
+                    <rect key="frame" x="15" y="59" width="384" height="40"/>
+                    <color key="backgroundColor" systemColor="systemGray6Color"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="TPl-P5-aQN"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="8Dr-y7-cLo">
+                    <rect key="frame" x="15" y="114" width="384" height="743"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="separatorColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="emD-KJ-xKk">
+                    <rect key="frame" x="304" y="777" width="70" height="70"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="plus" translatesAutoresizingMaskIntoConstraints="NO" id="ZX3-NQ-Tiz">
+                            <rect key="frame" x="17" y="17" width="36" height="36"/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" red="0.76470589639999997" green="0.84313726430000002" blue="0.97254908080000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="70" id="7LV-PA-hqS"/>
+                        <constraint firstItem="ZX3-NQ-Tiz" firstAttribute="leading" secondItem="emD-KJ-xKk" secondAttribute="leading" constant="17" id="8Bb-8R-WEM"/>
+                        <constraint firstItem="ZX3-NQ-Tiz" firstAttribute="top" secondItem="emD-KJ-xKk" secondAttribute="top" constant="17" id="90e-hS-NYC"/>
+                        <constraint firstAttribute="trailing" secondItem="ZX3-NQ-Tiz" secondAttribute="trailing" constant="17" id="FMm-4t-4gi"/>
+                        <constraint firstAttribute="bottom" secondItem="ZX3-NQ-Tiz" secondAttribute="bottom" constant="17" id="Nxo-Kw-RSr"/>
+                        <constraint firstAttribute="height" constant="70" id="q7I-zP-S1p"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="35"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="8Dr-y7-cLo" secondAttribute="trailing" constant="15" id="08n-qp-xIJ"/>
+                <constraint firstItem="8Dr-y7-cLo" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="4ED-6T-8qA"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="emD-KJ-xKk" secondAttribute="trailing" constant="40" id="77r-U0-qgH"/>
+                <constraint firstItem="d1R-vQ-1Qf" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="9QR-af-iMj"/>
+                <constraint firstItem="8Dr-y7-cLo" firstAttribute="top" secondItem="d1R-vQ-1Qf" secondAttribute="bottom" constant="15" id="TL3-Dq-6n2"/>
+                <constraint firstItem="d1R-vQ-1Qf" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="15" id="eLf-06-rAe"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="emD-KJ-xKk" secondAttribute="bottom" constant="15" id="g9V-94-Vyc"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="8Dr-y7-cLo" secondAttribute="bottom" constant="5" id="jRw-s7-h6q"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="d1R-vQ-1Qf" secondAttribute="trailing" constant="15" id="kY3-bs-z06"/>
+            </constraints>
             <point key="canvasLocation" x="139" y="144"/>
         </view>
     </objects>
     <resources>
+        <image name="plus" width="170.5" height="170.5"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
