@@ -101,6 +101,12 @@ extension HomePageVC: WeatherItemCellDelegate {
             return
         }
         print("redirect to details page to present weather for city \(model?.name ?? "***")")
+
+        let vcDetails = CityDetailsVC()
+        vcDetails.model = model
+        vcDetails.modalTransitionStyle = .coverVertical
+        vcDetails.modalPresentationStyle = .fullScreen
+        self.present(vcDetails, animated: true)
     }
 }
 

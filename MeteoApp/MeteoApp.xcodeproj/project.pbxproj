@@ -20,6 +20,8 @@
 		3D7AD7AC29BEB3CD00AA2BE2 /* WeatherItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D7AD7AA29BEB3CD00AA2BE2 /* WeatherItemCell.xib */; };
 		3D7AD7AD29BEB3CD00AA2BE2 /* WeatherItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7AD7AB29BEB3CD00AA2BE2 /* WeatherItemCell.swift */; };
 		3D7AD7AF29BEB56600AA2BE2 /* CityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7AD7AE29BEB56600AA2BE2 /* CityModel.swift */; };
+		3D7AD7B329BEC33100AA2BE2 /* CityDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7AD7B129BEC33100AA2BE2 /* CityDetailsVC.swift */; };
+		3D7AD7B429BEC33100AA2BE2 /* CityDetailsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D7AD7B229BEC33100AA2BE2 /* CityDetailsVC.xib */; };
 		3DC3F27E29BE96C00075C257 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC3F27D29BE96C00075C257 /* AppDelegate.swift */; };
 		3DC3F28029BE96C00075C257 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC3F27F29BE96C00075C257 /* SceneDelegate.swift */; };
 		3DC3F28529BE96C00075C257 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DC3F28329BE96C00075C257 /* Main.storyboard */; };
@@ -63,6 +65,8 @@
 		3D7AD7AA29BEB3CD00AA2BE2 /* WeatherItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WeatherItemCell.xib; sourceTree = "<group>"; };
 		3D7AD7AB29BEB3CD00AA2BE2 /* WeatherItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherItemCell.swift; sourceTree = "<group>"; };
 		3D7AD7AE29BEB56600AA2BE2 /* CityModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityModel.swift; sourceTree = "<group>"; };
+		3D7AD7B129BEC33100AA2BE2 /* CityDetailsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityDetailsVC.swift; sourceTree = "<group>"; };
+		3D7AD7B229BEC33100AA2BE2 /* CityDetailsVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CityDetailsVC.xib; sourceTree = "<group>"; };
 		3DC3F27A29BE96C00075C257 /* MeteoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeteoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DC3F27D29BE96C00075C257 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3DC3F27F29BE96C00075C257 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -110,6 +114,7 @@
 		3D5FE3F629BE9FB4007302B2 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				3D7AD7B029BEC33100AA2BE2 /* cityDetails */,
 				3D5FE3FA29BE9FFF007302B2 /* Home */,
 			);
 			path = ViewControllers;
@@ -194,6 +199,15 @@
 				3D7AD7AB29BEB3CD00AA2BE2 /* WeatherItemCell.swift */,
 			);
 			path = weatherItemCell;
+			sourceTree = "<group>";
+		};
+		3D7AD7B029BEC33100AA2BE2 /* cityDetails */ = {
+			isa = PBXGroup;
+			children = (
+				3D7AD7B129BEC33100AA2BE2 /* CityDetailsVC.swift */,
+				3D7AD7B229BEC33100AA2BE2 /* CityDetailsVC.xib */,
+			);
+			path = cityDetails;
 			sourceTree = "<group>";
 		};
 		3DC3F27129BE96C00075C257 = {
@@ -380,6 +394,7 @@
 				3DC3F28A29BE96C10075C257 /* Assets.xcassets in Resources */,
 				3D7AD7AC29BEB3CD00AA2BE2 /* WeatherItemCell.xib in Resources */,
 				3D5FE3FE29BEA06F007302B2 /* HomePageVC.xib in Resources */,
+				3D7AD7B429BEC33100AA2BE2 /* CityDetailsVC.xib in Resources */,
 				3DC3F28529BE96C00075C257 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -449,6 +464,7 @@
 			files = (
 				3D7AD7AD29BEB3CD00AA2BE2 /* WeatherItemCell.swift in Sources */,
 				3DC3F28829BE96C00075C257 /* MeteoApp.xcdatamodeld in Sources */,
+				3D7AD7B329BEC33100AA2BE2 /* CityDetailsVC.swift in Sources */,
 				3DC3F27E29BE96C00075C257 /* AppDelegate.swift in Sources */,
 				3D5FE40929BEA1C4007302B2 /* IntExtension.swift in Sources */,
 				3D5FE40229BEA0F5007302B2 /* HomePageVM.swift in Sources */,
