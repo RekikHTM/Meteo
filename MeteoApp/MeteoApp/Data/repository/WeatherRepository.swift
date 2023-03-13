@@ -65,4 +65,41 @@ class WeatherRepository {
             
         }
     }
+    
+    func searchListCitiesByName(value: String,
+                                   completion: @escaping((_ success: Bool,
+                                                          _ model: [WeatherResponse],
+                                                          _ error: String?) -> Void)) {
+        let params: [String: Any] = [
+            Constants.citySearchKey: value,
+            Constants.unitsKey: "metric",
+            Constants.apiIdKey: Constants.apiWeatherId,
+            Constants.langKey: "fr"
+        ]
+        let headers: [String: String] = [:]
+        var listWeather: [WeatherResponse] = []
+
+        apiRequest(url: Constants.getListWeathersPath,
+                   params: params,
+                   headers: headers) { success, response, statusCode in
+            guard statusCode.isValidStatusCode() else {
+                print("failed API")
+                completion(false, [], Constants.msgErrorServer)
+                return
+            }
+            let decoder = JSONDecoder()
+            do {
+                let res = try decoder.decode(WeatherResponse.self, from: response as! Data)
+                print("API success")
+                print(res.name ?? "")
+                listWeather.append(res)
+                completion(true, listWeather, nil)
+            } catch {
+                // parse object to specific ErrorModel to get the exact issue
+                print("failed json parser")
+                completion(false, [], Constants.msgErrorServer)
+            }
+            
+        }
+    }
 }

@@ -53,6 +53,20 @@ class HomePageVM {
     }
     
     /*
+     This function will add city to the list
+     */
+    func addCityToList(city: WeatherResponse) {
+        let area = city.name ?? ""
+        let lon: Float = Float(city.coord?.lon ?? 0)
+        let lat: Float = Float(city.coord?.lat ?? 0)
+        let cit: CityModel = .init(
+                        name: area,
+                        lon: lon,
+                        lat: lat)
+        self.model.selectedCities.append(cit)
+    }
+    
+    /*
      This function will be used on the VC to the get the current list
      */
      func getListWeatherItems() -> [WeatherResponse] {

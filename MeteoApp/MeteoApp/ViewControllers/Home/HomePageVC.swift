@@ -26,7 +26,7 @@ class HomePageVC: UIViewController {
         self.viewModel.loadListWeatherByCities()
         self.initTableView()
         self.initTextField()
-        // Do any additional setup after loading the view.
+        self.mAddView.setOnClickListener(target: self, action: #selector(onClickAddNewCity))
     }
 
     /*
@@ -48,6 +48,25 @@ class HomePageVC: UIViewController {
                                            for: .editingChanged)
     }
 
+    
+    @objc func onClickAddNewCity(_ tap: UITapGestureRecognizer) {
+        let vcSearch = SearchCityVC()
+        vcSearch.modalTransitionStyle = .coverVertical
+        vcSearch.modalPresentationStyle = .popover
+        vcSearch.delegate = self
+        self.present(vcSearch, animated: true)
+        
+    }
+}
+
+/*
+ This extenstion will handle actions got from searchPageVC
+ */
+extension HomePageVC: SearchCityVCDelegate {
+    func onSelectItemCity(city: WeatherResponse) {
+        self.viewModel.addCityToList(city: city)
+        self.viewModel.loadListWeatherByCities()
+    }
 }
 
 /*
