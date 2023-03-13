@@ -14,7 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     var window: UIWindow?
-    static let splashScreenDelay: CGFloat = 0.3
+    static let splashScreenDelay: CGFloat = 0.5
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         if #available(iOS 13.0, *) {
